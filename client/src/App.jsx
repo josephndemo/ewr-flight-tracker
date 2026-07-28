@@ -14,7 +14,7 @@ export default function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5000/api/ewr-hourly-flights');
+      const response = await fetch('/api/ewr-hourly-flights');
       if (!response.ok) throw new Error('Failed to load server data');
       const json = await response.json();
       setData(json.data);
